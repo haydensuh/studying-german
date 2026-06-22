@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>어휘 — Deutsch Wiki</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="logo">Deutsch Wiki</a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="메뉴 닫기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="../index.html" class="nav-link">홈</a>
+      <a href="grammar.html" class="nav-link">문법</a>
+      <a href="vocab.html" class="nav-link">어휘</a>
+      <a href="expressions.html" class="nav-link">표현</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <h2 class="page-title">어휘</h2>
+    </header>
+
+    <div class="search-bar">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <input type="search" id="searchInput" placeholder="단어, 동사 검색..." autocomplete="off">
+      <button class="search-clear" id="searchClear" aria-label="검색 지우기" hidden>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="7" fill="currentColor" opacity="0.15"/>
+          <path d="M6 6l4 4M10 6l-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <p class="search-result" id="searchResult" hidden></p>
+
+    <section class="section" id="vergleich-woerter">
+      <h3 class="section-title">단어 비교</h3>
+
+      <article class="card card-compare" data-searchable>
+        <button class="card-header" aria-expanded="true">
+          <span class="card-title">kennen <span class="vs">vs</span> wissen</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <p class="card-desc">둘 다 "알다"이지만, 아는 대상과 방식이 다릅니다.</p>
+          <div class="compare-grid">
+            <div class="compare-item compare-left">
+              <h4>kennen</h4>
+              <p>사람·장소·사물을 <strong>직접 경험</strong>으로 앎</p>
+              <ul>
+                <li>Ich <strong>kenne</strong> Berlin.</li>
+                <li>Kennst du <strong>ihn</strong>?</li>
+                <li>Sie <strong>kennt</strong> den Weg.</li>
+              </ul>
+              <span class="hint">~을 알고 있다 (친숙함)</span>
+            </div>
+            <div class="compare-item compare-right">
+              <h4>wissen</h4>
+              <p>사실·정보를 <strong>인지</strong>하고 있음</p>
+              <ul>
+                <li>Ich <strong>weiß</strong>, dass er kommt.</li>
+                <li>Weißt du, <strong>wie spät</strong> es ist?</li>
+                <li>Er <strong>weiß</strong> die Antwort.</li>
+              </ul>
+              <span class="hint">~라는 것을 알다 (정보)</span>
+            </div>
+          </div>
+          <div class="tip">
+            <strong>기억법:</strong> 사람 이름을 <em>kennen</em>, 사실을 <em>wissen</em>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card-compare" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">hören <span class="vs">vs</span> zuhören</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <div class="compare-grid">
+            <div class="compare-item compare-left">
+              <h4>hören</h4>
+              <p>소리가 들림 (수동적)</p>
+              <em class="example">Ich höre Musik.</em>
+            </div>
+            <div class="compare-item compare-right">
+              <h4>zuhören</h4>
+              <p>집중해서 듣기 (능동적) + <span class="tag tag-dat">Dativ</span></p>
+              <em class="example">Hör mir zu!</em>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="vergleich-verben">
+      <h3 class="section-title">동사 비교</h3>
+
+      <article class="card card-compare" data-searchable>
+        <button class="card-header" aria-expanded="true">
+          <span class="card-title">fallen <span class="vs">vs</span> gefallen</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <p class="card-desc">철자가 비슷하지만 의미와 격이 완전히 다릅니다.</p>
+          <div class="compare-grid">
+            <div class="compare-item compare-left">
+              <h4>fallen</h4>
+              <p>떨어지다 (물리적 낙하)</p>
+              <ul>
+                <li>Die Blätter <strong>fallen</strong>.</li>
+                <li>Er ist vom Fahrrad <strong>gefallen</strong>.</li>
+              </ul>
+              <span class="hint">주어가 떨어짐</span>
+            </div>
+            <div class="compare-item compare-right">
+              <h4>gefallen</h4>
+              <p>마음에 들다 — <span class="tag tag-dat">Dativ</span> 필수</p>
+              <ul>
+                <li>Das Kleid <strong>gefällt mir</strong>.</li>
+                <li>Wie <strong>gefällt</strong> dir der Film?</li>
+              </ul>
+              <span class="hint">~에게 마음에 들다</span>
+            </div>
+          </div>
+          <div class="tip">
+            <strong>기억법:</strong> gefallen = es gefällt <em>jemandem</em> (항상 여격)
+          </div>
+        </div>
+      </article>
+
+      <article class="card card-compare" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">bleiben <span class="vs">vs</span> bleiben lassen</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <div class="compare-grid">
+            <div class="compare-item compare-left">
+              <h4>bleiben</h4>
+              <p>머물다, 남다</p>
+              <em class="example">Ich bleibe zu Hause.</em>
+            </div>
+            <div class="compare-item compare-right">
+              <h4>bleiben lassen</h4>
+              <p>그대로 두다, 포기하다</p>
+              <em class="example">Lass es bleiben!</em>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="verben">
+      <h3 class="section-title">동사</h3>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">Dativ을 요구하는 동사</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <p class="card-desc"><span class="tag tag-dat">Dativ</span> 간접목적어가 필요한 대표 동사</p>
+          <ul class="verb-list">
+            <li><strong>helfen</strong> — 도와주다 <em>jemandem helfen</em></li>
+            <li><strong>danken</strong> — 감사하다 <em>jemandem danken</em></li>
+            <li><strong>gefallen</strong> — 마음에 들다 <em>jemandem gefallen</em></li>
+            <li><strong>gehören</strong> — ~의 것이다 <em>jemandem gehören</em></li>
+            <li><strong>fehlen</strong> — 없다/그리워하다 <em>jemandem fehlen</em></li>
+            <li><strong>passen</strong> — 맞다 <em>jemandem passen</em></li>
+            <li><strong>antworten</strong> — 대답하다 <em>jemandem antworten</em></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">trennbare Verben — 분리동사</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <p class="card-desc">현재시제에서 접두사가 문장 끝으로 분리됩니다.</p>
+          <ul class="verb-list">
+            <li><strong>aufstehen</strong> — 일어나다 <em>Ich stehe um 7 Uhr auf.</em></li>
+            <li><strong>anrufen</strong> — 전화하다 <em>Sie ruft mich an.</em></li>
+            <li><strong>mitkommen</strong> — 같이 가다 <em>Kommst du mit?</em></li>
+            <li><strong>einkaufen</strong> — 장보다 <em>Wir kaufen ein.</em></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>Deutsch Wiki — 개인 학습 노트</p>
+    </footer>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

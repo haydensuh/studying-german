@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문법 — Deutsch Wiki</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="logo">Deutsch Wiki</a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="메뉴 닫기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="../index.html" class="nav-link">홈</a>
+      <a href="grammar.html" class="nav-link">문법</a>
+      <a href="vocab.html" class="nav-link">어휘</a>
+      <a href="expressions.html" class="nav-link">표현</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <h2 class="page-title">문법</h2>
+    </header>
+
+    <div class="search-bar">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <input type="search" id="searchInput" placeholder="문법 검색..." autocomplete="off">
+      <button class="search-clear" id="searchClear" aria-label="검색 지우기" hidden>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="7" fill="currentColor" opacity="0.15"/>
+          <path d="M6 6l4 4M10 6l-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <p class="search-result" id="searchResult" hidden></p>
+
+    <section class="section" id="artikel">
+      <h3 class="section-title">격 (Kasus)</h3>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="true">
+          <span class="card-title">정관사 변화</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <table class="grammar-table">
+            <thead>
+              <tr>
+                <th>격</th>
+                <th>남성</th>
+                <th>중성</th>
+                <th>여성</th>
+                <th>복수</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tag tag-nom">Nominativ</span></td>
+                <td>der</td><td>das</td><td>die</td><td>die</td>
+              </tr>
+              <tr>
+                <td><span class="tag tag-akk">Akkusativ</span></td>
+                <td>den</td><td>das</td><td>die</td><td>die</td>
+              </tr>
+              <tr>
+                <td><span class="tag tag-dat">Dativ</span></td>
+                <td>dem</td><td>dem</td><td>der</td><td>den</td>
+              </tr>
+              <tr>
+                <td><span class="tag tag-gen">Genitiv</span></td>
+                <td>des</td><td>des</td><td>der</td><td>der</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">격의 역할</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <ul class="case-list">
+            <li>
+              <span class="tag tag-nom">Nominativ</span>
+              <span>주격 — 문장의 주어</span>
+              <em class="example">Der Mann liest.</em>
+            </li>
+            <li>
+              <span class="tag tag-akk">Akkusativ</span>
+              <span>목적격 — 직접목적어 (누구/무엇을)</span>
+              <em class="example">Ich sehe den Mann.</em>
+            </li>
+            <li>
+              <span class="tag tag-dat">Dativ</span>
+              <span>여격 — 간접목적어 (누구에게)</span>
+              <em class="example">Ich gebe dem Mann ein Buch.</em>
+            </li>
+            <li>
+              <span class="tag tag-gen">Genitiv</span>
+              <span>소유격 — 소유 관계 (~의)</span>
+              <em class="example">Das Auto des Mannes.</em>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">부정관사 ein 변화</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <table class="grammar-table">
+            <thead>
+              <tr>
+                <th>격</th>
+                <th>남성</th>
+                <th>중성</th>
+                <th>여성</th>
+                <th>복수</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tag tag-nom">Nominativ</span></td>
+                <td>ein</td><td>ein</td><td>eine</td><td>—</td>
+              </tr>
+              <tr>
+                <td><span class="tag tag-akk">Akkusativ</span></td>
+                <td>einen</td><td>ein</td><td>eine</td><td>—</td>
+              </tr>
+              <tr>
+                <td><span class="tag tag-dat">Dativ</span></td>
+                <td>einem</td><td>einem</td><td>einer</td><td>—</td>
+              </tr>
+              <tr>
+                <td><span class="tag tag-gen">Genitiv</span></td>
+                <td>eines</td><td>eines</td><td>einer</td><td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="praepositionen">
+      <h3 class="section-title">전치사 (Präpositionen)</h3>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">Wechselpräpositionen — 장소 vs 방향</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <p class="card-desc">in, an, auf, über, unter, vor, hinter, neben, zwischen</p>
+          <div class="compare-grid">
+            <div class="compare-item">
+              <span class="tag tag-dat">Dativ</span>
+              <strong>장소 (Wo?)</strong>
+              <em class="example">Ich bin in der Schule.</em>
+            </div>
+            <div class="compare-item">
+              <span class="tag tag-akk">Akkusativ</span>
+              <strong>방향 (Wohin?)</strong>
+              <em class="example">Ich gehe in die Schule.</em>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">격별 전치사</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <ul class="case-list">
+            <li>
+              <span class="tag tag-akk">Akkusativ</span>
+              <span>durch, für, gegen, ohne, um</span>
+              <em class="example">Ich kaufe ein Geschenk für dich.</em>
+            </li>
+            <li>
+              <span class="tag tag-dat">Dativ</span>
+              <span>aus, bei, mit, nach, von, zu, seit</span>
+              <em class="example">Ich fahre mit dem Bus.</em>
+            </li>
+            <li>
+              <span class="tag tag-gen">Genitiv</span>
+              <span>während, trotz, wegen, innerhalb, außerhalb</span>
+              <em class="example">Wegen des Regens bleiben wir zu Hause.</em>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="adjektive">
+      <h3 class="section-title">형용사</h3>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">형용사 어미 변화 (약변화)</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <p class="card-desc">정관사 뒤 형용사 — 격에 따라 어미만 변화</p>
+          <table class="grammar-table">
+            <thead>
+              <tr>
+                <th>격</th>
+                <th>남성</th>
+                <th>중성</th>
+                <th>여성</th>
+                <th>복수</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tag tag-nom">Nominativ</span></td>
+                <td>-e</td><td>-e</td><td>-e</td><td>-en</td>
+              </tr>
+              <tr>
+                <td><span class="tag tag-akk">Akkusativ</span></td>
+                <td>-en</td><td>-e</td><td>-e</td><td>-en</td>
+              </tr>
+              <tr>
+                <td><span class="tag tag-dat">Dativ</span></td>
+                <td>-en</td><td>-en</td><td>-en</td><td>-en</td>
+              </tr>
+              <tr>
+                <td><span class="tag tag-gen">Genitiv</span></td>
+                <td>-en</td><td>-en</td><td>-en</td><td>-en</td>
+              </tr>
+            </tbody>
+          </table>
+          <em class="example">der groß<strong>e</strong> Mann → den groß<strong>en</strong> Mann</em>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>Deutsch Wiki — 개인 학습 노트</p>
+    </footer>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

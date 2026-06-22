@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>표현 — Deutsch Wiki</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="logo">Deutsch Wiki</a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="메뉴 닫기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="../index.html" class="nav-link">홈</a>
+      <a href="grammar.html" class="nav-link">문법</a>
+      <a href="vocab.html" class="nav-link">어휘</a>
+      <a href="expressions.html" class="nav-link">표현</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <h2 class="page-title">표현</h2>
+    </header>
+
+    <div class="search-bar">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <input type="search" id="searchInput" placeholder="표현, 관용구 검색..." autocomplete="off">
+      <button class="search-clear" id="searchClear" aria-label="검색 지우기" hidden>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="7" fill="currentColor" opacity="0.15"/>
+          <path d="M6 6l4 4M10 6l-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <p class="search-result" id="searchResult" hidden></p>
+
+    <section class="section" id="alltag">
+      <h3 class="section-title">일상 표현</h3>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="true">
+          <span class="card-title">인사 &amp; 작별</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <ul class="verb-list">
+            <li><strong>Guten Morgen!</strong> — 좋은 아침!</li>
+            <li><strong>Guten Tag!</strong> — 안녕하세요 (낮)</li>
+            <li><strong>Guten Abend!</strong> — 좋은 저녁!</li>
+            <li><strong>Tschüss!</strong> — 잘 가! (비격식)</li>
+            <li><strong>Auf Wiedersehen!</strong> — 안녕히 가세요 (격식)</li>
+            <li><strong>Bis bald!</strong> — 곧 봐!</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">감사 &amp; 사과</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <ul class="verb-list">
+            <li><strong>Danke!</strong> / <strong>Vielen Dank!</strong> — 감사합니다</li>
+            <li><strong>Bitte!</strong> — 천만에요 / 부탁합니다</li>
+            <li><strong>Entschuldigung!</strong> — 실례합니다 / 죄송합니다</li>
+            <li><strong>Es tut mir leid.</strong> — 정말 죄송합니다</li>
+            <li><strong>Kein Problem!</strong> — 문제없어요</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="redewendungen">
+      <h3 class="section-title">관용 표현</h3>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">자주 쓰는 Redewendungen</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <ul class="verb-list">
+            <li><strong>Alles klar!</strong> — 알겠어! / 문제없어!
+              <em>Alles klar, wir treffen uns um 8.</em>
+            </li>
+            <li><strong>Stimmt's?</strong> — 그렇지? / 맞지?
+              <em>Es ist kalt heute, stimmt's?</em>
+            </li>
+            <li><strong>Mal sehen.</strong> — 어디 보자 / 글쎄
+              <em>Mal sehen, ob er kommt.</em>
+            </li>
+            <li><strong>Na und?</strong> — 그래서? / 어쩌라고?
+              <em>Er ist spät. — Na und?</em>
+            </li>
+            <li><strong>Da bin ich mir nicht sicher.</strong> — 잘 모르겠어
+              <em>Da bin ich mir nicht sicher.</em>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" data-searchable>
+        <button class="card-header" aria-expanded="false">
+          <span class="card-title">감정 표현</span>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="card-body" hidden>
+          <ul class="verb-list">
+            <li><strong>Das freut mich!</strong> — 기뻐요!</li>
+            <li><strong>Das ärgert mich.</strong> — 짜증 나요</li>
+            <li><strong>Ich habe Angst.</strong> — 무서워요</li>
+            <li><strong>Mir ist kalt/warm.</strong> — 춥/더워요 (<span class="tag tag-dat">Dativ</span>)</li>
+            <li><strong>Mir ist langweilig.</strong> — 심심해요 (<span class="tag tag-dat">Dativ</span>)</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>Deutsch Wiki — 개인 학습 노트</p>
+    </footer>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>독일어 학습 위키</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="logo">Deutsch Wiki</a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="메뉴 닫기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="index.html" class="nav-link">홈</a>
+      <a href="pages/grammar.html" class="nav-link">문법</a>
+      <a href="pages/vocab.html" class="nav-link">어휘</a>
+      <a href="pages/expressions.html" class="nav-link">표현</a>
+    </nav>
+  </aside>
+
+  <main class="main main--home">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <h2 class="page-title">독일어 학습 위키</h2>
+    </header>
+
+    <section class="home-hero">
+      <h3 class="home-title">Willkommen!</h3>
+      <p class="home-desc">개인 독일어 학습 노트입니다. 아래 카테고리에서 원하는 주제를 선택하세요.</p>
+    </section>
+
+    <nav class="home-grid">
+      <a href="pages/grammar.html" class="home-card">
+        <span class="home-card-icon">📖</span>
+        <h4 class="home-card-title">문법</h4>
+        <p class="home-card-desc">격, 전치사, 형용사 변화 등 문법 규칙</p>
+        <ul class="home-card-topics">
+          <li>격 (Kasus)</li>
+          <li>전치사</li>
+          <li>형용사</li>
+        </ul>
+      </a>
+
+      <a href="pages/vocab.html" class="home-card">
+        <span class="home-card-icon">📝</span>
+        <h4 class="home-card-title">어휘</h4>
+        <p class="home-card-desc">헷갈리는 단어·동사 비교와 동사 정리</p>
+        <ul class="home-card-topics">
+          <li>단어 비교</li>
+          <li>동사 비교</li>
+          <li>분리동사</li>
+        </ul>
+      </a>
+
+      <a href="pages/expressions.html" class="home-card">
+        <span class="home-card-icon">💬</span>
+        <h4 class="home-card-title">표현</h4>
+        <p class="home-card-desc">일상 회화와 관용 표현 모음</p>
+        <ul class="home-card-topics">
+          <li>인사 &amp; 작별</li>
+          <li>관용 표현</li>
+          <li>감정 표현</li>
+        </ul>
+      </a>
+    </nav>
+
+    <footer class="footer">
+      <p>Deutsch Wiki — 개인 학습 노트</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
