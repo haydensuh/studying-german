@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>복습 — Deutsch Wiki</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="logo">Deutsch Wiki</a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="메뉴 닫기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="../index.html" class="nav-link">홈</a>
+      <a href="grammar.html" class="nav-link">문법</a>
+      <a href="vocab.html" class="nav-link">어휘</a>
+      <a href="expressions.html" class="nav-link">표현</a>
+      <a href="review.html" class="nav-link">복습</a>
+    </nav>
+  </aside>
+
+  <main class="main main--review">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <h2 class="page-title">복습</h2>
+    </header>
+
+    <section class="review-hero">
+      <div>
+        <p class="review-eyebrow">Review Quiz</p>
+        <h3 class="home-title">날짜별로 쌓고, 전체를 고르게 복습하기</h3>
+        <p class="home-desc">독일어를 보고 한국어로, 한국어를 보고 독일어로 번역하는 문제가 랜덤하게 나옵니다. 적게 나온 학습 카드가 먼저 선택되도록 해서 새 내용도 오래된 내용도 놓치지 않게 했습니다.</p>
+      </div>
+      <div class="review-stats" id="reviewStats"></div>
+    </section>
+
+    <section class="quiz-panel" id="quizPanel">
+      <div class="quiz-topline">
+        <span class="tag" id="quizDirection">Quiz</span>
+        <span class="quiz-date" id="quizDate"></span>
+      </div>
+      <p class="quiz-prompt" id="quizPrompt">복습 데이터를 불러오는 중입니다.</p>
+      <div class="quiz-answer" id="quizAnswer" hidden></div>
+      <div class="quiz-actions">
+        <button class="primary-btn" id="showAnswerBtn" type="button">정답 보기</button>
+        <button class="secondary-btn" id="nextQuizBtn" type="button">다음 문제</button>
+      </div>
+      <p class="quiz-help" id="quizHelp"></p>
+    </section>
+
+    <section class="review-tools">
+      <div class="search-bar review-search">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input type="search" id="reviewSearch" placeholder="복습 카드 검색..." autocomplete="off">
+      </div>
+      <div class="date-tabs" id="dateTabs"></div>
+    </section>
+
+    <p class="search-result" id="reviewResult"></p>
+    <section class="review-list" id="reviewList"></section>
+
+    <footer class="footer">
+      <p>Deutsch Wiki — 개인 학습 노트</p>
+    </footer>
+  </main>
+
+  <script src="../data/review-data.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>
