@@ -1,5 +1,207 @@
 window.GERMAN_REVIEW_DAYS = [
   {
+    "date": "2026-07-03",
+    "title": "토요일 수업 준비 · 분리동사",
+    "summary": "vorbereiten, anfangen, vorlesen, aufhören의 쓰임과 분리동사 어순 복습",
+    "items": [
+      {
+        "id": "2026-07-03-01",
+        "type": "sentence",
+        "tags": [
+          "Trennbares Verb",
+          "vorbereiten",
+          "Akkusativ"
+        ],
+        "de": "Am Samstag bereitet sie den Unterricht vor.",
+        "ko": "토요일에 그녀는 수업을 준비한다.",
+        "words": [
+          [
+            "Am Samstag",
+            "토요일에"
+          ],
+          [
+            "bereitet ... vor",
+            "준비한다 / vorbereiten의 분리형"
+          ],
+          [
+            "sie",
+            "그녀는"
+          ],
+          [
+            "den Unterricht",
+            "수업을 / Akkusativ"
+          ]
+        ],
+        "grammar": [
+          "vorbereiten은 분리동사라 현재형 주절에서 bereitet와 vor로 나뉜다.",
+          "시간 표현 Am Samstag가 첫 자리에 오면 동사가 두 번째, 주어가 세 번째 자리에 온다.",
+          "der Unterricht는 직접목적어이므로 Akkusativ인 den Unterricht가 된다."
+        ],
+        "confusion": [
+          "❌ Am Samstag sie bereitet den Unterricht vor. → 주절의 동사는 두 번째 자리다.",
+          "⭕ Sie bereitet das Frühstück vor. → 그녀는 아침 식사를 준비한다.",
+          "부정사와 조동사 뒤에서는 접두사가 붙는다: Sie muss den Unterricht vorbereiten."
+        ]
+      },
+      {
+        "id": "2026-07-03-02",
+        "type": "word",
+        "tags": [
+          "Trennbares Verb",
+          "anfangen",
+          "Konjugation"
+        ],
+        "de": "anfangen",
+        "ko": "시작하다",
+        "words": [
+          [
+            "ich fange an",
+            "나는 시작한다"
+          ],
+          [
+            "du fängst an",
+            "너는 시작한다"
+          ],
+          [
+            "er/sie/es fängt an",
+            "그/그녀/그것은 시작한다"
+          ],
+          [
+            "Wir fangen morgen mit Deutsch an.",
+            "우리는 내일부터 독일어를 시작한다."
+          ]
+        ],
+        "grammar": [
+          "anfangen은 현재형에서 접두사 an이 문장 끝으로 간다.",
+          "du와 er/sie/es에서는 어간 모음 a가 ä로 바뀐다: fängst, fängt.",
+          "mit + Dativ + anfangen은 '~을 시작하다'라는 뜻이다."
+        ],
+        "confusion": [
+          "조동사와 함께 쓰면 분리하지 않는다: Ich möchte anfangen.",
+          "anfangen은 일상 회화에서 자주 쓰고, beginnen은 조금 더 격식 있지만 뜻은 거의 같다.",
+          "Der Film fängt um 20 Uhr an. = Der Film beginnt um 20 Uhr."
+        ]
+      },
+      {
+        "id": "2026-07-03-03",
+        "type": "sentence",
+        "tags": [
+          "Trennbares Verb",
+          "vorlesen",
+          "Akkusativ"
+        ],
+        "de": "Sie liest einen Text vor.",
+        "ko": "그녀는 글을 소리 내어 읽는다.",
+        "words": [
+          [
+            "Sie",
+            "그녀는"
+          ],
+          [
+            "liest ... vor",
+            "소리 내어 읽는다 / vorlesen의 분리형"
+          ],
+          [
+            "einen Text",
+            "글 하나를 / Akkusativ"
+          ],
+          [
+            "jemandem etwas vorlesen",
+            "누구에게 무엇을 읽어 주다"
+          ]
+        ],
+        "grammar": [
+          "vorlesen은 '소리 내어 읽다, 읽어 주다'라는 분리동사다.",
+          "lesen의 3인칭 단수는 liest이고, 접두사 vor는 문장 끝에 놓인다.",
+          "읽어 주는 상대는 Dativ, 읽는 내용은 Akkusativ로 표현할 수 있다."
+        ],
+        "confusion": [
+          "lesen은 일반적인 '읽다', vorlesen은 다른 사람이 들을 수 있게 '소리 내어 읽다'다.",
+          "Ich lese den Kindern ein Buch vor. → 나는 아이들에게 책을 읽어 준다.",
+          "조동사 뒤에서는 붙여 쓴다: Kannst du mir die Geschichte vorlesen?"
+        ]
+      },
+      {
+        "id": "2026-07-03-04",
+        "type": "sentence",
+        "tags": [
+          "Aufgabenstellung",
+          "Plural",
+          "trennbare Verben"
+        ],
+        "de": "Wo sind trennbare Verben? Fünf Antworten sind richtig.",
+        "ko": "분리동사를 찾아보세요. 정답은 다섯 개입니다.",
+        "words": [
+          [
+            "Wo",
+            "어디에"
+          ],
+          [
+            "trennbare Verben",
+            "분리동사들"
+          ],
+          [
+            "fünf Antworten",
+            "다섯 개의 답"
+          ],
+          [
+            "richtig sein",
+            "맞다 / 정답이다"
+          ]
+        ],
+        "grammar": [
+          "trennbar는 '분리 가능한', trennbare Verben은 '분리동사들'이라는 뜻이다.",
+          "Antworten은 Antwort의 복수형이므로 동사도 sind를 쓴다.",
+          "문제 지시문에서는 자연스럽게 '분리동사를 찾으세요'로 옮길 수 있다."
+        ],
+        "confusion": [
+          "직역은 '분리동사는 어디에 있나요? 다섯 답이 맞습니다.'이다.",
+          "fünf가 명사를 꾸밀 때 명사는 복수형 Antworten가 된다.",
+          "richtig은 문맥에 따라 '옳은, 맞는, 정답인'으로 해석한다."
+        ]
+      },
+      {
+        "id": "2026-07-03-05",
+        "type": "word",
+        "tags": [
+          "Trennbares Verb",
+          "aufhören",
+          "Dativ"
+        ],
+        "de": "aufhören",
+        "ko": "그만두다, 멈추다, 끝나다",
+        "words": [
+          [
+            "Ich höre auf.",
+            "나는 그만둘게."
+          ],
+          [
+            "Hör bitte auf!",
+            "제발 그만해!"
+          ],
+          [
+            "Sie hört mit dem Rauchen auf.",
+            "그녀는 담배를 끊는다."
+          ],
+          [
+            "Der Regen hört auf.",
+            "비가 그친다."
+          ]
+        ],
+        "grammar": [
+          "aufhören은 현재형에서 höre/hörst/hört와 auf로 분리된다.",
+          "mit + Dativ + aufhören은 '~을 그만두다'라는 뜻이다.",
+          "사람의 행동뿐 아니라 비나 소음 등이 멈출 때도 쓴다."
+        ],
+        "confusion": [
+          "조동사 뒤에서는 붙여 쓴다: Er muss aufhören.",
+          "anfangen = 시작하다 / aufhören = 그만두다, 멈추다.",
+          "Wann hört der Lärm auf? → 소음은 언제 멈추니?"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-06-18",
     "title": "German Review Cards v1",
     "summary": "문장, 표현, 문법 포인트를 함께 정리한 첫 복습 카드 묶음",
